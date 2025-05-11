@@ -19,3 +19,8 @@ output "host" {
   value     = azurerm_kubernetes_cluster.k8s.kube_config.0.host
   sensitive = true
 }
+
+output "ingress_ip_address" {
+  value = azurerm_public_ip.ingress_ip.ip_address
+  description = "The public IP address for the Ingress controller"
+}

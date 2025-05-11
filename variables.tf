@@ -18,8 +18,9 @@ variable "vm_size" {
   default = "Standard_B2s"
 }
 
-variable "SSH_PUBLIC_KEY_PATH" {
-  description = "Path to the SSH public key"
+variable "SSH_PUBLIC_KEY" {
+     description = "SSH public key content"
+     type        = string
 }
 
 variable "ARM_CLIENT_ID" {
