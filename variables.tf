@@ -3,7 +3,7 @@ variable "location" {
 }
 
 variable "cluster_name" {
-  default = "bestrong-aks"
+  default = "bestrongAKS"
 }
 
 variable "dns_prefix" {
@@ -18,11 +18,26 @@ variable "vm_size" {
   default = "Standard_B2s"
 }
 
-variable "ssh_public_key_path" {
+variable "SSH_PUBLIC_KEY_PATH" {
   description = "Path to the SSH public key"
 }
 
-variable "client_id" {}
-variable "client_secret" {}
-variable "subscription_id" {}
-variable "tenant_id" {}
+variable "ARM_CLIENT_ID" {
+  description = "Azure client ID"
+  type        = string
+}
+
+variable "ARM_CLIENT_SECRET" {
+  description = "Azure client secret"
+  type        = string
+}
+
+variable "ARM_TENANT_ID" {
+  description = "Azure tenant ID"
+  type        = string
+}
+
+variable "ARM_SUBSCRIPTION_ID" {
+  description = "Azure subscription ID"
+  type        = string
+}

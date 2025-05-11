@@ -28,10 +28,10 @@ resource "azurerm_kubernetes_cluster" "k8s" {
     type = "SystemAssigned"
   }
 
-  linux_profile {
+ linux_profile {
     admin_username = "azureuser"
     ssh_key {
-      key_data = file(var.ssh_public_key_path)
+      key_data = file(var.SSH_PUBLIC_KEY_PATH)
     }
   }
 
