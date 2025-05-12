@@ -66,5 +66,3 @@ resource "azurerm_public_ip" "ingress_ip" {
     Environment = "Development"
   }
 }
-
-# Ingress public IP

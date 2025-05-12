@@ -15,7 +15,7 @@ variable "agent_count" {
 }
 
 variable "vm_size" {
-  default = "Standard_B2s"
+  default = "Standard_B1s"
 }
 
 variable "SSH_PUBLIC_KEY" {

@@ -24,7 +24,6 @@ The Terraform code provisions the following Azure resources:
 - **variables.tf**: Defines input variables
 - **providers.tf**: Specifies required providers and their versions
 - **outputs.tf**: Defines output values exposed after deployment
-- **terraform.tfvars**: Contains the values for variables (sensitive information)
 
 ## Variables
 
@@ -34,7 +33,7 @@ The Terraform code provisions the following Azure resources:
 | `cluster_name` | Name of the AKS cluster | bestrongAKS |
 | `dns_prefix` | DNS prefix for the AKS cluster | bestrong |
 | `agent_count` | Number of nodes in the default node pool | 2 |
-| `vm_size` | VM size for the nodes | Standard_B2s |
+| `vm_size` | VM size for the nodes | Standard_B1s |
 | `SSH_PUBLIC_KEY` | SSH public key for node access | - |
 | `ARM_CLIENT_ID` | Azure service principal client ID | - |
 | `ARM_CLIENT_SECRET` | Azure service principal client secret | - |
@@ -68,7 +67,3 @@ After successful deployment, the following outputs are available:
 - `kube_config`: Kubernetes configuration for connecting to the cluster
 - `host`: Kubernetes API server endpoint
 - `ingress_ip_address`: Public IP address for the Ingress controller
-
-## Security Note
-
-The `terraform.tfvars` file contains sensitive information and should not be committed to version control. Consider using environment variables or a secure secret management solution instead. 
