@@ -33,7 +33,7 @@ The Terraform code provisions the following Azure resources:
 | `cluster_name` | Name of the AKS cluster | bestrongAKS |
 | `dns_prefix` | DNS prefix for the AKS cluster | bestrong |
 | `agent_count` | Number of nodes in the default node pool | 2 |
-| `vm_size` | VM size for the nodes | Standard_B1s |
+| `vm_size` | VM size for the nodes | Standard_B2s |
 | `SSH_PUBLIC_KEY` | SSH public key for node access | - |
 | `ARM_CLIENT_ID` | Azure service principal client ID | - |
 | `ARM_CLIENT_SECRET` | Azure service principal client secret | - |
