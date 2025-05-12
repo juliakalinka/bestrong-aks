@@ -48,7 +48,6 @@ resource "azurerm_kubernetes_cluster" "k8s" {
   }
 }
 
-# Надаємо AKS доступ до ACR через роль AcrPull
 resource "azurerm_role_assignment" "acr_pull" {
   principal_id                     = azurerm_kubernetes_cluster.k8s.kubelet_identity[0].object_id
   role_definition_name             = "AcrPull"
@@ -56,7 +55,6 @@ resource "azurerm_role_assignment" "acr_pull" {
   skip_service_principal_aad_check = true
 }
 
-# Підготовка до налаштування Ingress
 resource "azurerm_public_ip" "ingress_ip" {
   name                = "${var.cluster_name}-ingress-ip"
   resource_group_name = azurerm_resource_group.rg.name
